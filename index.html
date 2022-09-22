@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="JsBarcode.all.min.js"></script>
+    <title>Barcode Genarator</title>
+</head>
+<body>
+    <h1>Free Online Barcode Genarator</h1>
+    <div id="info">
+    <b><p>Create Your Own Barcode In 1s<p></b>
+    
+        <input type="text" id="inp" placeholder="Give Name For Your Barcode" required><br>
+        <button id="gen" onclick='sub()'>Genarate</button>
+    <br>
+    <svg id="barcode"></svg>
+</div>
+    
+    <script>
+        
+       function sub(){
+        let x = document.getElementById('inp').value;
+        JsBarcode("#barcode", x);
+       }
+        
+    </script>
+</body>
+</html>
